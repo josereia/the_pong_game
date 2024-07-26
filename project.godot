@@ -10,9 +10,17 @@ config_version=5
 
 [application]
 
-config/name="the_pong_game"
+config/name="The Pong Game"
+config/description="A simple and classic game made in the Godot Engine for study purposes."
+config/version="0.1.0"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/resizable=false
+window/stretch/mode="viewport"
 
 [dotnet]
 
@@ -20,5 +28,6 @@ project/assembly_name="pong"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
