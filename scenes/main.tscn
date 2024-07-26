@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://blpyqrycddmlj"]
+
+[ext_resource type="Theme" uid="uid://cgyjt8d4iodac" path="res://styles/theme.tres" id="1_luhml"]
+[ext_resource type="Texture2D" uid="uid://b12ierx2ee0h" path="res://assets/play.png" id="2_jfqm4"]
+[ext_resource type="Texture2D" uid="uid://chixswvfni3fn" path="res://assets/suitcase.png" id="5_uf8sb"]
+
+[node name="Main" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_luhml")
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Title" type="Label" parent="CenterContainer"]
+layout_mode = 2
+theme = ExtResource("1_luhml")
+theme_type_variation = &"HeaderLarge"
+text = "The Pong Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_luhml")
+text = "Start"
+icon = ExtResource("2_jfqm4")
+flat = true
+
+[node name="CreditsButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_luhml")
+text = "Credits"
+icon = ExtResource("5_uf8sb")
+flat = true
+
+[node name="Version" type="Label" parent="."]
+offset_left = 1089.0
+offset_top = 619.0
+offset_right = 1137.0
+offset_bottom = 642.0
+theme = ExtResource("1_luhml")
+theme_override_font_sizes/font_size = 8
+text = "v0.1.0"
+horizontal_alignment = 1
+vertical_alignment = 1
