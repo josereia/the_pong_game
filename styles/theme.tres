@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cgyjt8d4iodac"]
+
+[ext_resource type="FontFile" uid="uid://yo7a4tid4alo" path="res://fonts/prstart.ttf" id="1_hyye8"]
+[ext_resource type="StyleBox" uid="uid://cw83i6n1whl4m" path="res://styles/hover_button.tres" id="2_nqffp"]
+[ext_resource type="StyleBox" uid="uid://de15y2viv63aa" path="res://styles/normal_button.tres" id="3_btxiw"]
+
+[resource]
+Button/constants/h_separation = 6
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_hyye8")
+Button/styles/hover = ExtResource("2_nqffp")
+Button/styles/normal = ExtResource("3_btxiw")
+Label/fonts/font = ExtResource("1_hyye8")
