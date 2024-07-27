@@ -47,7 +47,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_luhml")
-text = "Start"
+text = "START"
 icon = ExtResource("2_jfqm4")
 flat = true
 
@@ -56,7 +56,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_luhml")
-text = "Credits"
+text = "CREDITS"
 icon = ExtResource("5_uf8sb")
 flat = true
 

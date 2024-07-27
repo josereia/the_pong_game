@@ -27,6 +27,10 @@ window/stretch/mode="viewport"
 
 project/assembly_name="pong"
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/translations/translations.en.translation", "res://assets/translations/translations.pt.translation")
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
