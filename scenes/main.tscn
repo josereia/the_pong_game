@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://blpyqrycddmlj"]
+[gd_scene load_steps=6 format=3 uid="uid://blpyqrycddmlj"]
 
 [ext_resource type="Theme" uid="uid://cgyjt8d4iodac" path="res://styles/theme.tres" id="1_luhml"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_xt7vi"]
 [ext_resource type="Texture2D" uid="uid://b12ierx2ee0h" path="res://assets/play.png" id="2_jfqm4"]
+[ext_resource type="Texture2D" uid="uid://orqsbn61l8vv" path="res://assets/settings.png" id="4_yiryf"]
 [ext_resource type="Texture2D" uid="uid://chixswvfni3fn" path="res://assets/suitcase.png" id="5_uf8sb"]
 
 [node name="Main" type="Control"]
@@ -31,7 +32,7 @@ alignment = 1
 [node name="Title" type="Label" parent="CenterContainer"]
 layout_mode = 2
 theme = ExtResource("1_luhml")
-theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 34
 text = "The Pong Game"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -49,6 +50,15 @@ size_flags_vertical = 4
 theme = ExtResource("1_luhml")
 text = "START"
 icon = ExtResource("2_jfqm4")
+flat = true
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_luhml")
+text = "SETTINGS"
+icon = ExtResource("4_yiryf")
 flat = true
 
 [node name="CreditsButton" type="Button" parent="CenterContainer/VBoxContainer"]
@@ -83,4 +93,5 @@ theme_override_font_sizes/font_size = 8
 text = "@josereia"
 uri = "https://github.com/josereia"
 
+[connection signal="pressed" from="CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]

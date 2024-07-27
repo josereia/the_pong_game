@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpuw7jd3803au"]
+
+[ext_resource type="Script" path="res://scripts/settings.gd" id="1_vtn88"]
+[ext_resource type="Theme" uid="uid://cgyjt8d4iodac" path="res://styles/theme.tres" id="2_qhiu2"]
+[ext_resource type="Texture2D" uid="uid://bxpnvnt8bi1an" path="res://assets/left-arrow.png" id="3_cu2uc"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vtn88")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_qhiu2")
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="CenterContainer"]
+layout_mode = 2
+theme = ExtResource("2_qhiu2")
+theme_override_font_sizes/font_size = 34
+text = "The Pong Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 24
+
+[node name="LanguageContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="LanguageLabel" type="Label" parent="CenterContainer/VBoxContainer/LanguageContainer"]
+layout_mode = 2
+theme = ExtResource("2_qhiu2")
+text = "LANGUAGE"
+vertical_alignment = 1
+
+[node name="LanguageOptionButton" type="OptionButton" parent="CenterContainer/VBoxContainer/LanguageContainer"]
+layout_mode = 2
+theme = ExtResource("2_qhiu2")
+flat = true
+item_count = 2
+selected = 0
+popup/item_0/text = "English"
+popup/item_0/id = 1
+popup/item_1/text = "Português"
+popup/item_1/id = 2
+
+[node name="BackButton" type="Button" parent="CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_qhiu2")
+text = "BACK"
+icon = ExtResource("3_cu2uc")
+flat = true
+
+[node name="VersionLabel" type="Label" parent="."]
+offset_left = 1093.0
+offset_top = 619.0
+offset_right = 1141.0
+offset_bottom = 642.0
+theme = ExtResource("2_qhiu2")
+theme_override_font_sizes/font_size = 8
+text = "v0.0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreditsLinkButton" type="LinkButton" parent="."]
+offset_left = 1011.0
+offset_top = 625.0
+offset_right = 1083.0
+offset_bottom = 637.0
+theme = ExtResource("2_qhiu2")
+theme_override_font_sizes/font_size = 8
+text = "@josereia"
+uri = "https://github.com/josereia"
+
+[connection signal="item_selected" from="CenterContainer/VBoxContainer/LanguageContainer/LanguageOptionButton" to="." method="_on_language_option_button_item_selected"]
+[connection signal="pressed" from="CenterContainer/BackButton" to="." method="_on_back_button_pressed"]
