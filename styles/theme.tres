@@ -11,3 +11,5 @@ Button/fonts/font = ExtResource("1_hyye8")
 Button/styles/hover = ExtResource("2_nqffp")
 Button/styles/normal = ExtResource("3_btxiw")
 Label/fonts/font = ExtResource("1_hyye8")
+LinkButton/font_sizes/font_size = 12
+LinkButton/fonts/font = ExtResource("1_hyye8")
