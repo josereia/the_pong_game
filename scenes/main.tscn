@@ -5,17 +5,21 @@
 [ext_resource type="Texture2D" uid="uid://b12ierx2ee0h" path="res://assets/play.png" id="2_jfqm4"]
 [ext_resource type="Texture2D" uid="uid://chixswvfni3fn" path="res://assets/suitcase.png" id="5_uf8sb"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_xt7vi")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(1152, 648)
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
 [node name="CenterContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(1152, 648)
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 size_flags_horizontal = 3
@@ -57,6 +61,7 @@ icon = ExtResource("5_uf8sb")
 flat = true
 
 [node name="Version" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1093.0
 offset_top = 619.0
 offset_right = 1141.0
@@ -68,6 +73,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Credits" type="LinkButton" parent="."]
+layout_mode = 0
 offset_left = 1011.0
 offset_top = 625.0
 offset_right = 1083.0
@@ -76,3 +82,5 @@ theme = ExtResource("1_luhml")
 theme_override_font_sizes/font_size = 8
 text = "@josereia"
 uri = "https://github.com/josereia"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
