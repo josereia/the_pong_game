@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://txfe6lu6qwbq"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_i31ni"]
+[ext_resource type="Texture2D" uid="uid://b43o04vx3dc5v" path="res://assets/divider.png" id="2_c8wck"]
+[ext_resource type="Texture2D" uid="uid://dv2571cuhkkta" path="res://assets/player.png" id="3_756rm"]
+[ext_resource type="Texture2D" uid="uid://bgbpmmcmoyn7e" path="res://assets/ball.png" id="4_7yd1x"]
+[ext_resource type="Theme" uid="uid://cgyjt8d4iodac" path="res://styles/theme.tres" id="5_8a13n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtmsu"]
+size = Vector2(20, 648)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_i31ni")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Scores" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 50.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Scores"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 50.0
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="P1ScoreLabel" type="Label" parent="Scores/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Player 1 Score"
+mouse_filter = 0
+theme = ExtResource("5_8a13n")
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="P2ScoreLabel" type="Label" parent="Scores/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Player 2 Score"
+mouse_filter = 0
+theme = ExtResource("5_8a13n")
+theme_override_font_sizes/font_size = 24
+text = "0"
+vertical_alignment = 1
+
+[node name="Divider" type="Sprite2D" parent="."]
+position = Vector2(574, 324)
+texture = ExtResource("2_c8wck")
+
+[node name="Ball" type="Sprite2D" parent="."]
+position = Vector2(574, 324)
+texture = ExtResource("4_7yd1x")
+
+[node name="Player1" type="Sprite2D" parent="."]
+position = Vector2(50, 324)
+texture = ExtResource("3_756rm")
+
+[node name="Player2" type="Sprite2D" parent="."]
+position = Vector2(1102, 324)
+texture = ExtResource("3_756rm")
+
+[node name="Player1Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1Area"]
+position = Vector2(10, 324)
+shape = SubResource("RectangleShape2D_xtmsu")
+
+[node name="Player2Area" type="Area2D" parent="."]
+position = Vector2(1132, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2Area"]
+position = Vector2(10, 324)
+shape = SubResource("RectangleShape2D_xtmsu")
