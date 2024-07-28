@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_i31ni"]
 [ext_resource type="Texture2D" uid="uid://b43o04vx3dc5v" path="res://assets/divider.png" id="2_c8wck"]
-[ext_resource type="Texture2D" uid="uid://dv2571cuhkkta" path="res://assets/player.png" id="3_756rm"]
 [ext_resource type="Texture2D" uid="uid://bgbpmmcmoyn7e" path="res://assets/ball.png" id="4_7yd1x"]
 [ext_resource type="Theme" uid="uid://cgyjt8d4iodac" path="res://styles/theme.tres" id="5_8a13n"]
+[ext_resource type="PackedScene" uid="uid://bix3ro2o0sly3" path="res://scenes/player.tscn" id="5_snfdi"]
 [ext_resource type="Material" uid="uid://dmyja0dd5bxuc" path="res://materials/vhs_material.tres" id="6_owvj6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xtmsu"]
@@ -61,13 +61,12 @@ texture = ExtResource("2_c8wck")
 position = Vector2(574, 324)
 texture = ExtResource("4_7yd1x")
 
-[node name="Player1" type="Sprite2D" parent="."]
+[node name="Player1" parent="." instance=ExtResource("5_snfdi")]
 position = Vector2(50, 324)
-texture = ExtResource("3_756rm")
 
-[node name="Player2" type="Sprite2D" parent="."]
+[node name="Player2" parent="." instance=ExtResource("5_snfdi")]
 position = Vector2(1102, 324)
-texture = ExtResource("3_756rm")
+type = 1
 
 [node name="Player1Area" type="Area2D" parent="."]
 
