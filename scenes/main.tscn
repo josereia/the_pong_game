@@ -1,22 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://blpyqrycddmlj"]
+[gd_scene load_steps=7 format=3 uid="uid://blpyqrycddmlj"]
 
 [ext_resource type="Theme" uid="uid://cgyjt8d4iodac" path="res://styles/theme.tres" id="1_luhml"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_xt7vi"]
 [ext_resource type="Texture2D" uid="uid://b12ierx2ee0h" path="res://assets/play.png" id="2_jfqm4"]
 [ext_resource type="Texture2D" uid="uid://orqsbn61l8vv" path="res://assets/settings.png" id="4_yiryf"]
 [ext_resource type="Texture2D" uid="uid://chixswvfni3fn" path="res://assets/suitcase.png" id="5_uf8sb"]
+[ext_resource type="Material" uid="uid://dmyja0dd5bxuc" path="res://materials/vhs_material.tres" id="6_53gp1"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_xt7vi")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="BackgroundColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(1152, 648)
-layout_mode = 0
-offset_right = 1152.0
+offset_left = -2.0
+offset_right = 1150.0
 offset_bottom = 648.0
-color = Color(0, 0, 0, 1)
+mouse_filter = 2
+color = Color(0.0941176, 0.0941176, 0.0941176, 1)
 
 [node name="CenterContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(1152, 648)
@@ -92,6 +94,15 @@ theme = ExtResource("1_luhml")
 theme_override_font_sizes/font_size = 8
 text = "@josereia"
 uri = "https://github.com/josereia"
+
+[node name="ShaderColorRect" type="ColorRect" parent="."]
+material = ExtResource("6_53gp1")
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://txfe6lu6qwbq"]
+[gd_scene load_steps=8 format=3 uid="uid://txfe6lu6qwbq"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_i31ni"]
 [ext_resource type="Texture2D" uid="uid://b43o04vx3dc5v" path="res://assets/divider.png" id="2_c8wck"]
 [ext_resource type="Texture2D" uid="uid://dv2571cuhkkta" path="res://assets/player.png" id="3_756rm"]
 [ext_resource type="Texture2D" uid="uid://bgbpmmcmoyn7e" path="res://assets/ball.png" id="4_7yd1x"]
 [ext_resource type="Theme" uid="uid://cgyjt8d4iodac" path="res://styles/theme.tres" id="5_8a13n"]
+[ext_resource type="Material" uid="uid://dmyja0dd5bxuc" path="res://materials/vhs_material.tres" id="6_owvj6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xtmsu"]
 size = Vector2(20, 648)
@@ -12,11 +13,11 @@ size = Vector2(20, 648)
 [node name="Game" type="Node2D"]
 script = ExtResource("1_i31ni")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(1152, 648)
+[node name="BackgroundColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 648.0
-color = Color(0, 0, 0, 1)
+mouse_filter = 2
+color = Color(0.0941176, 0.0941176, 0.0941176, 1)
 
 [node name="Scores" type="Control" parent="."]
 layout_mode = 3
@@ -80,3 +81,11 @@ position = Vector2(1132, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2Area"]
 position = Vector2(10, 324)
 shape = SubResource("RectangleShape2D_xtmsu")
+
+[node name="ShaderColorRect" type="ColorRect" parent="."]
+material = ExtResource("6_owvj6")
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
