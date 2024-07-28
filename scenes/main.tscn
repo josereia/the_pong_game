@@ -14,6 +14,7 @@ script = ExtResource("1_xt7vi")
 
 [node name="BackgroundColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(1152, 648)
+layout_mode = 0
 offset_left = -2.0
 offset_right = 1150.0
 offset_bottom = 648.0
