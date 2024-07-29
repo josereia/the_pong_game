@@ -1,7 +1,8 @@
 extends StaticBody2D
+class_name Player
 
 var speed: int = 500
-@export var type: Types
+@export var type: Type
 
 func _process(delta: float) -> void:
   move(delta)
@@ -9,9 +10,9 @@ func _process(delta: float) -> void:
 func move(delta: float) -> void:
   var new_position: float = speed * delta
 
-  if (type == Types.PLAYER1):
+  if (type == Type.PLAYER1):
     set_new_position("move_up_player_1", "move_down_player_1", new_position)
-  elif (type == Types.PLAYER2):
+  elif (type == Type.PLAYER2):
     set_new_position("move_up_player_2", "move_down_player_2", new_position)
 
 func set_new_position(up_action: String, down_action: String, new_position: float) -> void:
@@ -22,4 +23,4 @@ func set_new_position(up_action: String, down_action: String, new_position: floa
 
   position.y = clamp(position.y, 30, (648 - 30))
 
-enum Types {PLAYER1, PLAYER2}
+enum Type {PLAYER1, PLAYER2}

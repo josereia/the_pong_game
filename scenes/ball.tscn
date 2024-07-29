@@ -5,7 +5,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uq1qx"]
 
-[node name="Ball" type="Area2D"]
+[node name="Ball" type="Area2D" groups=["balls"]]
 script = ExtResource("1_2u5gx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -14,4 +14,9 @@ texture = ExtResource("1_cnmfr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_uq1qx")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
