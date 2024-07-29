@@ -1,6 +1,6 @@
 # The Pong Game
 
-A simple and classic game made in the Godot Engine for study purposes.
+The classic Pong game made in the Godot Engine for study purposes.
 
 ## Technologies
 
@@ -16,6 +16,7 @@ A simple and classic game made in the Godot Engine for study purposes.
 
 * Multiplayer(2 players)
 * Multilingual(English and Portuguese)
+* VHS/CRT Effect
 
 ## Screenshots
 
