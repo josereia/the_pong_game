@@ -38,6 +38,7 @@ The classic Pong game made in the Godot Engine for study purposes.
 * Importing assets
 * Applying shaders
 * Input map(actions)
+* Scenes and navigation
 * Project settings basics
 
 ## Screenshots
