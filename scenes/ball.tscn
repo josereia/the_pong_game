@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxuboleo6se35"]
+
+[ext_resource type="Script" path="res://scripts/ball.gd" id="1_2u5gx"]
+[ext_resource type="Texture2D" uid="uid://bgbpmmcmoyn7e" path="res://assets/ball.png" id="1_cnmfr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uq1qx"]
+
+[node name="Ball" type="Area2D"]
+script = ExtResource("1_2u5gx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cnmfr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_uq1qx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

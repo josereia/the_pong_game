@@ -7,7 +7,7 @@
 radius = 2.0
 height = 60.0
 
-[node name="Player" type="StaticBody2D"]
+[node name="Player" type="StaticBody2D" groups=["players"]]
 script = ExtResource("1_gid0q")
 type = null
 
