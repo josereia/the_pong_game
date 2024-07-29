@@ -4,21 +4,26 @@ The classic Pong game made in the Godot Engine for study purposes.
 
 ## Technologies
 
-* Godot Engine
 * GDScript
+* Godot Engine
 
 ## Platforms
 
-* Windows
 * Web
+* Windows
 
 ## Features
 
+* Player scores
+* VHS/CRT Effect
 * Multiplayer(2 players)
 * Multilingual(English and Portuguese)
-* VHS/CRT Effect
 
 ## Screenshots
+
+### Preview
+
+![Preview](assets/readme/preview.gif)
 
 ### Main
 
