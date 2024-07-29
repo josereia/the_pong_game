@@ -21,6 +21,25 @@ The classic Pong game made in the Godot Engine for study purposes.
 * Multiplayer(2 players)
 * Multilingual(English and Portuguese)
 
+# Knowledge acquired
+
+* Label
+* Timer
+* Buttons
+* Area 2D
+* Sprite 2D
+* Translations
+* 2D Collisions
+* Project export
+* 2D positioning
+* GDScript basics
+* Theme and style
+* Siginals(events)
+* Importing assets
+* Applying shaders
+* Input map(actions)
+* Project settings basics
+
 ## Screenshots
 
 ### Preview
