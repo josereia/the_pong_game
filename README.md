@@ -1,3 +1,5 @@
+<img src="icon.png" alt="logo" width="240px" height="240px" />
+
 # The Pong Game
 
 The classic Pong game made in the Godot Engine for study purposes.
